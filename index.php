@@ -1,3 +1,8 @@
+<?php
+    include __DIR__ . "/partials/database.php"
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,15 @@
     
 
 
+<ul>
+<?php foreach($album as $data) {?>
+
+    <li><img src="<?php echo $data['poster']?>" alt="image"> </li>
+    <li> <?php echo $data['title']?> </li>
+    <li> <?php echo $data['author']?> </li>
+    <li> <?php echo $data['year']?> </li>
+<?php } ?>
+</ul>
 
 
 
