@@ -1,0 +1,32 @@
+.music {
+    background-color: #1a1a1a;
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+        padding-top: 100px;
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .fixing_ul {
+                width: calc(100% / 3);
+                ul {
+                    margin: 15px 90px;
+                    background-color: #000;
+                    min-height: 250px;
+                    padding: 25px;
+                    li {
+                        h3 {
+                            margin-bottom: 10px;
+                        }
+                        @include list;
+                        color: white;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}
