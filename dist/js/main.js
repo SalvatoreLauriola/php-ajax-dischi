@@ -10982,7 +10982,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  console.log('ok'); //REFS
+
+  var container = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.wrapper'); //Init Handlebars Template 
+
+  var source = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#entry-template').html();
+  var template = Handlebars.compile(source); //Get Data from php
+
+  jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+    url: 'http://localhost/php-ajax-dischi/partials/json-script.php',
+    method: 'GET',
+    success: function success(res) {
+      for (var i = 0; i < res.length; i++) {
+        var context = {
+          poster: res[i].poster,
+          title: res[i].title,
+          author: res[i].author,
+          year: res[i].year
+        }; //output finale
+
+        var output = template(context); //inserisci item
+
+        container.append(output);
+      }
+    },
+    error: function error() {
+      console.log('Errore chiamata');
+    }
+  });
+});
 
 /***/ }),
 
