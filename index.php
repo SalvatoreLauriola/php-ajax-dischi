@@ -17,7 +17,7 @@
 <header>
     <div class="container_head">
         <img src="dist/img/spotify-logo.png" alt="logo">
-        <a href="index-ajax.php"></a>
+        <a href="index-ajax.php">Home-Ajax</a>
     </div>
 </header>
     

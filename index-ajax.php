@@ -13,7 +13,8 @@
 <header>
     <div class="container_head">
         <img src="dist/img/spotify-logo.png" alt="logo">
-        <a href="index.php"></a>
+        
+        <a href="index.php">Home php</a>
     </div>
 </header>
     
